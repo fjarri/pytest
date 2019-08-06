@@ -1187,12 +1187,12 @@ def test_collect_functools_partial(testdir):
     )
     result = testdir.inline_run()
     result.assertoutcome(passed=6, failed=2)
-    
-    
+
+
 def test_collect_functools_partial_class(testdir):
     """
     Test that collection of functools.partial object works, and arguments
-    to the wrapped functions are dealt with correctly (see #811).
+    to the wrapped functions are dealt with correctly (see #5701).
     """
     testdir.makepyfile(
         """
